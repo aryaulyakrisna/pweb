@@ -1,128 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surat Keterangan Tempat Tinggal</title>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Surat</title>
     <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 0 auto;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        padding: 20px;
+      }
 
-        th, td {
-            text-align: left;
-            padding: 8px;
-            border: 1px solid black;
-        }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 60px 40px;
+        margin-top: 60px;
+        margin-bottom: 120px;
+        border-radius: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
 
-        th {
-            background-color: #f2f2f2;
-        }
+      h1,
+      h3 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+      .form-group {
+        margin-bottom: 15px;
+      }
 
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-        }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
 
-        .header-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
+      input[type="text"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
 
-        .header-table td {
-            border: none;
-            padding: 0;
-        }
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
 
-        .header-table img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
+      .radio-group {
+        margin-top: 5px;
+      }
 
-        .header-table h1, h2, h3, p {
-            margin: 0;
+      .radio-group label {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: normal;
+      }
+
+      select {
+        background-color: white;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      button:hover {
+        background-color: #1557b0;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 15px;
         }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+        padding: 0.5rem;
+      }
+
+      label {
+        color: rgb(66, 66, 66);
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+      }
+
+      p {
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulir Surat</h1>
+      <h3>Tolong isi data diri Anda</h3>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Nama Anda"
+            required
+          />
+        </div>
 
-<table class="header-table">
-    <tr>
-        <td>
-            <img src="gambar_logo.png" alt="Logo Pemerintah">
-        </td>
-        <td style="text-align: center;">
-            <h1>PEMERINTAH KABUPATEN BARITO KUALA</h1>
-            <h2>KECAMATAN MANDASTANA</h2>
-            <h3>KEPALA DESA TABING RIMBAH</h3>
-            <p>Alamat: ....</p>
-        </td>
-    </tr>
-</table>
+        <div class="form-group">
+          <label for="ttl">Tempat/Tanggal Lahir</label>
+          <input
+            type="text"
+            id="ttl"
+            name="ttl"
+            placeholder="Contoh: Jakarta, 1 Januari 1990"
+            required
+          />
+        </div>
 
-<hr style="border-top: 3px solid black;">
+        <div class="form-group">
+          <label for="pekerjaan">Pekerjaan</label>
+          <input
+            type="text"
+            id="pekerjaan"
+            name="pekerjaan"
+            placeholder="Pekerjaan Anda"
+            required
+          />
+        </div>
 
-<h2>SURAT KETERANGAN TEMPAT TINGGAL</h2>
-<p>Nomor: ..........................</p>
+        <div class="form-group">
+          <label for="agama">Agama</label>
+          <select id="agama" name="agama" required>
+            <option value="">Pilih Agama</option>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Protestan">Protestan</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Konghucu">Konghucu</option>
+          </select>
+        </div>
 
-<form>
-    <table>
-        <tr>
-            <th>Nama</th>
-            <td><input type="text" name="nama" required></td>
-        </tr>
-        <tr>
-            <th>Tempat/Tgl. Lahir</th>
-            <td><input type="date" name="tanggal_lahir" required></td>
-        </tr>
-        <tr>
-            <th>Pekerjaan</th>
-            <td><input type="text" name="pekerjaan" required></td>
-        </tr>
-        <tr>
-            <th>Agama</th>
-            <td><input type="text" name="agama" required></td>
-        </tr>
-        <tr>
-            <th>Jenis Kelamin</th>
-            <td>
-                <label for="laki-laki">Laki-laki</label>
-                <input type="radio" name="jenis_kelamin" id="laki-laki" value="Laki-laki" required>
-                <label for="perempuan">Perempuan</label>
-                <input type="radio" name="jenis_kelamin" id="perempuan" value="Perempuan" required>
-            </td>
-        </tr>
-        <tr>
-            <th>Alamat</th>
-            <td><textarea name="alamat" required></textarea></td>
-        </tr>
-    </table>
+        <div class="form-group">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                name="jenis_kelamin"
+                value="Laki-laki"
+                required
+              />
+              Laki-laki
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="jenis_kelamin"
+                value="Perempuan"
+                required
+              />
+              Perempuan
+            </label>
+          </div>
+        </div>
 
-<table>
-    <tr>
-        <td style="text-align: right;">Tabing Rimbah, <input type="date" name="tanggal" required></td>
-    </tr>
-    <tr>
-        <td colspan="2" style="text-align: right; margin-top: 10px;">
-            <p>Kepala Desa Tabing Rimbah</p>
-            <p><input type="text" name="nama_kepala_desa" required></p>
-        </td>
-    </tr>
-</table>
-</form>
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <textarea
+            id="alamat"
+            name="alamat"
+            placeholder="Isi Alamat Anda..."
+            required
+          ></textarea>
+        </div>
 
-</body>
+        <div class="form-group">
+          <label for="tahun_tinggal">Tahun Mulai Tinggal</label>
+          <input
+            type="number"
+            id="tahun_tinggal"
+            name="tahun_tinggal"
+            min="1900"
+            max="2024"
+            required
+          />
+          <div class="hint-text">
+            Masukkan tahun pertama kali Anda tinggal di alamat tersebut
+          </div>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <p>Created by kel 3 💘</p>
+  </body>
 </html>
