@@ -1,59 +1,178 @@
-<!-- Untuk Method GET  -->
-
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Surat Pernyataan</title>
+    <title>Surat Keterangan Tempat Tinggal</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f0f2f5;
-        padding: 20px;
+        line-height: 1.6;
       }
       .container {
-        max-width: 700px;
+        width: 700px;
         margin: 0 auto;
-        background-color: white;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+        /* border: 1px solid black; */
       }
-      h2 {
+      .header-table {
+        width: 100%;
+      }
+      .header-table img {
+        width: 100%;
+      }
+      .header-title h2,
+      .header-title h3,
+      .header-title p {
         text-align: center;
-        color: #333;
+        text-indent: 0;
+        margin: 0;
       }
-      p {
-        line-height: 1.6;
-        color: #333;
+      .header-table p {
+        margin-top: 10px;
+      }
+      .content {
+        margin-top: 20px;
+      }
+      .table-info {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 0 60px 0 60px;
+      }
+      .table-info td {
+        padding: 5px;
+        vertical-align: top;
+      }
+      .table-info td:first-child {
+        width: 150px;
       }
       .signature {
-        margin-top: 30px;
-        text-align: right;
+        margin-top: 50px;
+        text-align: center;
+        margin-right: 50px;
+        display: flex;
+        justify-content: end;
+      }
+      .signature p {
+        margin: 5px 0;
+      }
+      p {
+        text-align: justify;
+        text-indent: 60px;
+      }
+      .letter-title,
+      .letter-title h2,
+      .letter-title p {
+        text-align: center;
+        text-indent: 0;
+      }
+      .garis {
+        margin-top: 0;
+        border: none;
+        border-top: 2px solid black;
+        height: 2px;
+        border-bottom: 2px solid black;
+      }
+      #nama_signature {
+        text-decoration: underline dotted black;
+        text-underline-offset: 5px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h2>Surat Pernyataan</h2>
-      <p>Yang bertanda tangan di bawah ini:</p>
-      <p>Nama: <span id="nama"></span></p>
-      <p>Tempat/Tanggal Lahir: <span id="ttl"></span></p>
-      <p>Pekerjaan: <span id="pekerjaan"></span></p>
-      <p>Agama: <span id="agama"></span></p>
-      <p>Jenis Kelamin: <span id="jenis_kelamin"></span></p>
-      <p>Alamat: <span id="alamat"></span></p>
-      <p>Tahun Mulai Tinggal: <span id="tahun_tinggal"></span></p>
+      <table class="header-table">
+        <tr>
+          <td style="width: 15%">
+            <img src="3f34f96e7f9a396c4c9beedaadc5bb7c.png" alt="Logo" />
+          </td>
 
-      <p>
-        Dengan ini menyatakan bahwa data tersebut adalah benar adanya dan saya
-        bersedia bertanggung jawab atas kebenaran informasi yang diberikan.
-      </p>
+          <td class="header-title">
+            <h3>PEMERINTAH KABUPATEN BEKASI</h3>
+            <h3>KECAMATAN SETU</h3>
+            <h3>KEPALA DESA TAMAN RAHAYU</h3>
+            <p>Alamat:</p>
+          </td>
+
+          <td style="width: 15%"></td>
+        </tr>
+      </table>
+
+      <hr class="garis" />
+
+      <div class="letter-title">
+        <h2><u>SURAT KETERANGAN TEMPAT TINGGAL</u></h2>
+        <p>Nomor:</p>
+      </div>
+
+      <div class="content">
+        <p>
+          Yang bertanda tangan di bawah ini, Kepala Desa Taman Rahayu Kabupaten
+          Bekasi, dengan ini menerangkan bahwa :
+        </p>
+        <table class="table-info">
+          <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td id="nama"></td>
+          </tr>
+          <tr>
+            <td>Tempat/Tgl. Lahir</td>
+            <td>:</td>
+            <td id="ttl"></td>
+          </tr>
+          <tr>
+            <td>Pekerjaan</td>
+            <td>:</td>
+            <td id="pekerjaan"></td>
+          </tr>
+          <tr>
+            <td>Agama</td>
+            <td>:</td>
+            <td id="agama"></td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td id="jenis_kelamin"></td>
+          </tr>
+          <tr>
+            <td>Alamat</td>
+            <td>:</td>
+            <td id="alamat">
+              sahdjhsadjfhkjhsaj sd ajfhasjkhdf sajd fshd fsjdfk hsjdah jhsdjkhf
+              jhsjdhfiheruhjijsb asfknasdjflksjdljaskkadsjcnsdjcnerunfunaeirnnsa
+              csdjhvjashk;aldf;kajsd;fksddjfkajdlfk
+            </td>
+          </tr>
+        </table>
+
+        <p id="tahun_tinggal">
+          Adalah benar yang bersangkutan bertempat tinggal tetap, tidak
+          terputus-putus di alamat di atas tersebut sejak tahun ...... sampai
+          dengan sekarang.
+        </p>
+        <p>
+          Demikian, Surat keterangan ini dibuat untuk dipergunakan sebagai
+          persyaratan mengikuti Pengangkatan Perangkat Desa Taman Rahayu.
+        </p>
+      </div>
 
       <div class="signature">
-        <p>Hormat Saya,</p>
-        <p>(<span id="nama_signature"></span>)</p>
+        <table>
+          <tr>
+            <td>..........................., .................... 2024</td>
+          </tr>
+          <tr>
+            <td>Kepala Desa Taman Rahayu</td>
+          </tr>
+          <tr>
+            <td style="height: 150px; vertical-align: bottom;" id="nama_signature">
+              ( Arya Ulya Krisna )
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
 
@@ -62,13 +181,21 @@
 
       document.getElementById("nama").innerText = urlParams.get("nama");
       document.getElementById("ttl").innerText = urlParams.get("ttl");
-      document.getElementById("pekerjaan").innerText = urlParams.get("pekerjaan");
+      document.getElementById("pekerjaan").innerText =
+        urlParams.get("pekerjaan");
       document.getElementById("agama").innerText = urlParams.get("agama");
-      document.getElementById("jenis_kelamin").innerText = urlParams.get("jenis_kelamin");
+      document.getElementById("jenis_kelamin").innerText =
+        urlParams.get("jenis_kelamin");
       document.getElementById("alamat").innerText = urlParams.get("alamat");
-      document.getElementById("tahun_tinggal").innerText = urlParams.get("tahun_tinggal");
+      document.getElementById(
+        "tahun_tinggal"
+      ).innerText = `Adalah benar yang bersangkutan bertempat tinggal tetap, tidak terputus-putus di alamat di atas tersebut sejak tahun ${urlParams.get(
+        "tahun_tinggal"
+      )} sampai dengan sekarang.`;
 
-      document.getElementById("nama_signature").innerText = urlParams.get("nama");
+      document.getElementById("nama_signature").innerText = `(${urlParams.get(
+        "nama"
+      )})`;
     </script>
   </body>
 </html>
