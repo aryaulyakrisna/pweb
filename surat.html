@@ -1,0 +1,74 @@
+<!-- Untuk Method GET  -->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surat Pernyataan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        padding: 20px;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        line-height: 1.6;
+        color: #333;
+      }
+      .signature {
+        margin-top: 30px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Surat Pernyataan</h2>
+      <p>Yang bertanda tangan di bawah ini:</p>
+      <p>Nama: <span id="nama"></span></p>
+      <p>Tempat/Tanggal Lahir: <span id="ttl"></span></p>
+      <p>Pekerjaan: <span id="pekerjaan"></span></p>
+      <p>Agama: <span id="agama"></span></p>
+      <p>Jenis Kelamin: <span id="jenis_kelamin"></span></p>
+      <p>Alamat: <span id="alamat"></span></p>
+      <p>Tahun Mulai Tinggal: <span id="tahun_tinggal"></span></p>
+
+      <p>
+        Dengan ini menyatakan bahwa data tersebut adalah benar adanya dan saya
+        bersedia bertanggung jawab atas kebenaran informasi yang diberikan.
+      </p>
+
+      <div class="signature">
+        <p>Hormat Saya,</p>
+        <p>(<span id="nama_signature"></span>)</p>
+      </div>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+
+      document.getElementById("nama").innerText = urlParams.get("nama");
+      document.getElementById("ttl").innerText = urlParams.get("ttl");
+      document.getElementById("pekerjaan").innerText = urlParams.get("pekerjaan");
+      document.getElementById("agama").innerText = urlParams.get("agama");
+      document.getElementById("jenis_kelamin").innerText = urlParams.get("jenis_kelamin");
+      document.getElementById("alamat").innerText = urlParams.get("alamat");
+      document.getElementById("tahun_tinggal").innerText = urlParams.get("tahun_tinggal");
+
+      document.getElementById("nama_signature").innerText = urlParams.get("nama");
+    </script>
+  </body>
+</html>
